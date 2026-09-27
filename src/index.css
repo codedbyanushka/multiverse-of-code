@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-cinematic: 'Bebas Neue', sans-serif;
+    --font-crest: 'Cinzel', serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #090A0F;
+    color: #F3F4F6;
+    overflow-x: hidden;
+  }
+}
+
+.font-cinematic {
+  font-family: var(--font-cinematic);
+  letter-spacing: 0.05em;
+}
+
+.font-crest {
+  font-family: var(--font-crest);
+}
+
+.font-mono-nums {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Marvel Cinematic Glows & Accents */
+.marvel-red-glow {
+  box-shadow: 0 0 35px -5px rgba(230, 36, 41, 0.45);
+}
+
+.stark-cyan-glow {
+  box-shadow: 0 0 30px -5px rgba(0, 240, 255, 0.4);
+}
+
+.wakanda-purple-glow {
+  box-shadow: 0 0 30px -5px rgba(157, 78, 221, 0.4);
+}
+
+.infinity-gold-glow {
+  box-shadow: 0 0 30px -5px rgba(245, 158, 11, 0.4);
+}
+
+/* Cybernetic Grid & Halftone subtle background overlays */
+.cyber-grid {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.comic-dots {
+  background-image: radial-gradient(rgba(230, 36, 41, 0.12) 1.5px, transparent 1.5px);
+  background-size: 16px 16px;
+}
+
+/* Marvel HUD Angular Corner Cuts */
+.corner-cut {
+  clip-path: polygon(
+    0 12px,
+    12px 0,
+    100% 0,
+    100% calc(100% - 12px),
+    calc(100% - 12px) 100%,
+    0 100%
+  );
+}
+
+.corner-cut-lg {
+  clip-path: polygon(
+    0 24px,
+    24px 0,
+    100% 0,
+    100% calc(100% - 24px),
+    calc(100% - 24px) 100%,
+    0 100%
+  );
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090A0F;
+}
+::-webkit-scrollbar-thumb {
+  background: #252A36;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E62429;
+}
